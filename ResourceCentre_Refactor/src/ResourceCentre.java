@@ -221,7 +221,8 @@ public class ResourceCentre {
 	
 	//================================= Option 3 Loan (CURD- Update) =================================
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
-		
+	
+	// display
 		boolean isLoaned = false;
 
 		if (tag.isEmpty() || dueDate.isEmpty())
