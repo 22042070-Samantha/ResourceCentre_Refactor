@@ -224,7 +224,6 @@ public class ResourceCentre {
 	
 	// comment
 		
-	// display
 		
 		boolean isLoaned = false;
 
