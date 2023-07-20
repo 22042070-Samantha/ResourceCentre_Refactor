@@ -204,6 +204,9 @@ public class ResourceCentre {
 	
 	//================================= Option 3 Loan (CURD- Update) =================================
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
+	
+	// comment
+		
 		
 		boolean isLoaned = false;
 
@@ -212,8 +215,10 @@ public class ResourceCentre {
 		
 		for (int i = 0; i < camcorderList.size(); i++) {
 					
-			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())				
-					&& camcorderList.get(i).getIsAvailable() == true) {
+			String assetTag = camcorderList.get(i).getAssetTag();
+			boolean availability = camcorderList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)				
+					&& availability == true) {
 				
 				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
@@ -246,8 +251,10 @@ public class ResourceCentre {
 		
 		for (int i = 0; i < chromebookList.size(); i++) {
 
-			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
-					&& chromebookList.get(i).getIsAvailable() == true) {
+			String assetTag = chromebookList.get(i).getAssetTag();
+			boolean availability = chromebookList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)
+					&& availability == true) {
 				
 				chromebookList.get(i).setIsAvailable(false);
 				chromebookList.get(i).setDueDate(dueDate);
